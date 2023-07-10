@@ -1,0 +1,17 @@
+{
+  "name": "container",
+  "version": "0.0.1",
+  "description": "writing style transformer",
+  "main": "server.js",
+  "scripts": {
+    "build": "node build",
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeadJavaliner/AuthorStyleEmulator.git"
+  },
+  "author": "Chris Santen of Turing Limited",
+  "license": "UNLICENSED"
+}

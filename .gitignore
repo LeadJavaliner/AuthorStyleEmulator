@@ -1,0 +1,38 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore build artifacts
+artifacts/
+build/
+dist/
+
+# Ignore Hardhat-specific files
+.cache/
+.env
+
+# Ignore local Hardhat network files
+network/
+
+# Ignore compiled contracts
+contracts/**/*.json
+
+# Ignore compiled test scripts
+test/**/*.js
+
+# Ignore Solidity coverage reports
+coverage/
+
+# Ignore generated documentation
+docs/
+
+# Ignore editor-specific files
+.vscode/
+.idea/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore npm lock file
+package-lock.json
+

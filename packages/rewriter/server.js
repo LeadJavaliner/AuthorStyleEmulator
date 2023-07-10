@@ -1,8 +1,13 @@
 const express = require('express');
 const openai = require('openai');
 const app = express();
+const path = require('path');
 
-openai.apiKey = 'YOUR_OPENAI_API_KEY';
+openai.apiKey = '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';
+
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'dist'))); 
+
 
 app.post('/api/rewrite', async (req, res) => {
   const { text, author } = req.body;
@@ -20,3 +25,12 @@ app.post('/api/rewrite', async (req, res) => {
     res.status(500).send("Error in processing request");
   }
 });
+
+app.get('*', (req, res) => {  // This wildcard method handles all requests
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+});
+
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
